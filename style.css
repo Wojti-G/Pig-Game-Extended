@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 
 * {
   margin: 0;
@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   font-weight: 400;
   height: 100vh;
   color: #333;
@@ -26,7 +26,7 @@ body {
 main {
   position: relative;
   width: 120rem;
-  height: 60rem;
+  height: 65rem;
   background-color: rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(200px);
   filter: blur();
@@ -34,6 +34,55 @@ main {
   border-radius: 9px;
   overflow: hidden;
   display: flex;
+}
+
+.info {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+
+  padding: 5rem;
+  border-radius: 9px;
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.15);
+
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  transform: scale(0);
+  transition: all 0.3s;
+}
+
+.info--title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1.6rem;
+}
+.info--text {
+  font-size: 1.6rem;
+}
+.info--text:last-child {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+.info--text--list {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.4rem;
+  font-weight: 800;
+}
+.info--list {
+  list-style: none;
+  margin-bottom: 2rem;
+  /* margin-left: 1.6rem; */
+}
+.info--list li {
+  font-size: 1.6rem;
 }
 
 .player {
@@ -132,13 +181,27 @@ main {
 }
 
 .btn--new {
-  top: 4rem;
+  top: 10%;
+  font-weight: 600;
+}
+.btn--info {
+  top: 20%;
+}
+.btn--info::first-letter {
+  margin-right: 0;
 }
 .btn--roll {
-  top: 39.3rem;
+  bottom: 25%;
 }
 .btn--hold {
-  top: 46.1rem;
+  bottom: 14%;
+}
+.btn--exit {
+  top: 8%;
+  left: 93%;
+}
+.btn--exit::first-letter {
+  margin-right: 0;
 }
 
 .btn:active {
@@ -152,7 +215,7 @@ main {
 
 .dice {
   position: absolute;
-  top: 16.5rem;
+  top: 38%;
   left: 50%;
   transform: translateX(-50%);
   height: 10rem;
@@ -177,16 +240,13 @@ main {
 .hidden {
   display: none;
 }
+.scaled {
+  transform: scale(1);
+}
 
-/* Animacja */
-@keyframes roll {
-  0% {
-    transform: translateX(-50%) rotate(0) translateY(0);
-  }
-  50% {
-    transform: translateX(-50%) rotate(180deg) translateY(20%);
-  }
-  100% {
-    transform: translateX(-50%) rotate(360deg) translateY(0);
-  }
+.back {
+  position: fixed;
+
+  width: 100%;
+  height: 100%;
 }

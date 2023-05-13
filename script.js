@@ -18,6 +18,11 @@ const player1El = document.querySelector(".player--1");
 const name0El = document.getElementById("name--0");
 const name1El = document.getElementById("name--1");
 
+const btnInfo = document.querySelector(".btn--info");
+const btnExit = document.querySelector(".btn--exit");
+const infoEl = document.querySelector(".info");
+const backEl = document.querySelector(".back");
+
 // --------------------------------------------------------
 // Dodatek:
 // - 2 kości w grze
@@ -142,3 +147,14 @@ btnHold.addEventListener("click", function () {
 
 // Player resets game
 btnNew.addEventListener("click", init);
+
+// See info
+btnInfo.addEventListener("click", function () {
+  infoEl.classList.toggle("scaled");
+});
+btnExit.addEventListener("click", function () {
+  infoEl.classList.toggle("scaled");
+});
+backEl.addEventListener("click", function () {
+  infoEl.classList.remove("scaled");
+});

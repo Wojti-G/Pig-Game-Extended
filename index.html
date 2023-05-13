@@ -8,6 +8,8 @@
     <title>Pig Game</title>
   </head>
   <body>
+    <div class="back">&nbsp;</div>
+
     <main>
       <section class="player player--0 player--active">
         <h2 class="name" id="name--0">Player 1</h2>
@@ -29,8 +31,38 @@
       <img src="dice-5.png" alt="Playing dice" class="dice dice--0" />
       <img src="dice-1.png" alt="Playing dice" class="dice dice--1" />
       <button class="btn btn--new">🔄 New game</button>
+      <button class="btn btn--info">ℹ️</button>
       <button class="btn btn--roll">🎲 Roll dice</button>
       <button class="btn btn--hold">📥 Hold</button>
+
+      <div class="info">
+        <h3 class="info--title">
+          Piggy Game - get score close to full hundreds to win!
+        </h3>
+        <button class="btn btn--exit">✖️</button>
+        <p class="info--text">
+          The closer to 500 you are, the wider the range needed to win. <br />
+          But be careful - exceeding 505 points means loosing - so focus on
+          hopping on one of the winning ranges.
+        </p>
+        <p class="info--text--list">To win, you have to score either:</p>
+        <ul class="info--list">
+          <li>▪️ 100-101 points, or</li>
+          <li>▪️ 200-202 points, or</li>
+          <li>▪️ 300-303 points, or</li>
+          <li>▪️ 400-404 points, or</li>
+          <li>▪️ 500-505 points.</li>
+        </ul>
+        <p class="info--text">
+          First person to score points from one of the ranges wins.
+        </p>
+        <p class="info--text">2 x same roll means points x 2</p>
+        <p class="info--text">
+          If you roll at least one "1" you loose turn and current points
+        </p>
+        <p class="info--text">Choose your tactics and win!</p>
+        <p class="info--text">Have fun!</p>
+      </div>
     </main>
     <script src="script.js"></script>
   </body>
