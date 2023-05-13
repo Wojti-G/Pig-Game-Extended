@@ -24,7 +24,7 @@ const name1El = document.getElementById("name--1");
 // - jeśli wypadną 2 takie same kości to punkty x2
 // - jeśli którakolwiek z kości to 1 -> switchPlayer
 
-// - zdobądź punkty w okolicach pełnych setek by wygrać. Kolejna setka to przedział większy o 1.
+// - zdobądź punkty w okolicach pełnych setek by wygrać. Kolejna setka to przedział większy o 1. Jak przekroczysz 505 to wygrywa przeciwnik.
 // --------------------------------------------------------
 
 // Starting conditions
